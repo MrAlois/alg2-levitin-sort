@@ -11,7 +11,12 @@
 class Sorter {
 public:
     template <typename T>
-    static std::vector<T> sort(std::vector<T> data, SortingAlgorithm<T> *algorithm);
+    static std::vector<T> sort(std::vector<T> data, SortingAlgorithm<T> *algorithm){
+        auto const& result = algorithm->process(data);
+        delete algorithm;
+
+        return result;
+    };
 };
 
 #endif //ALG2_LEVITIN_SORT_SORTER_H

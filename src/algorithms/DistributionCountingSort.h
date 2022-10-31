@@ -11,7 +11,13 @@
 template <class T>
 class DistributionCountingSort : public SortingAlgorithm<T> {
 public:
-    std::vector<T> process(std::vector<T> data) override;
+    virtual ~DistributionCountingSort() = default;
+
+    std::vector<T> process(std::vector<T> &data) override {
+
+
+        return std::vector<T>();
+    };
 };
 
 #endif //ALG2_LEVITIN_SORT_DISTRIBUTIONCOUNTINGSORT_H
