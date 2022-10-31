@@ -8,12 +8,11 @@
 
 #include "SortingAlgorithm.h"
 
-template <typename T>
-class ComparisonCountingSort : public SortingAlgorithm<T> {
+class ComparisonCountingSort : public SortingAlgorithm {
 public:
     virtual ~ComparisonCountingSort() = default;
 
-    std::vector<T> process(std::vector<T> &data) override {
+    std::vector<int> process(std::vector<int> &data) override {
         std::vector<int> count(data.size(), 0);
 
         // Compare values
@@ -27,7 +26,7 @@ public:
         }
 
         // Reorder items based on computed counts
-        std::vector<T> result(data.size());
+        std::vector<int> result(data.size());
         for(int i = 0; i < data.size(); i++)
             result[count[i]] = data[i];
 

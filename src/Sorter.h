@@ -8,10 +8,8 @@
 #include <vector>
 #include "algorithms/SortingAlgorithm.h"
 
-class Sorter {
-public:
-    template <typename T>
-    static std::vector<T> sort(std::vector<T> data, SortingAlgorithm<T> *algorithm){
+namespace Sorter {
+    static std::vector<int> sort(std::vector<int> data, SortingAlgorithm *algorithm){
         auto const& result = algorithm->process(data);
         delete algorithm;
 

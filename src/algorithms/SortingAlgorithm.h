@@ -7,11 +7,10 @@
 
 #include <vector>
 
-template <typename T>
 class SortingAlgorithm {
 public:
     virtual ~SortingAlgorithm() = default;
-    virtual std::vector<T> process(std::vector<T> &data) = 0;
+    virtual std::vector<int> process(std::vector<int> &data) = 0;
 };
 
 
