@@ -3,4 +3,4 @@ project(alg2_levitin_sort)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(alg2_levitin_sort src/main.cpp src/algorithms/ComparisonCountingSort.h src/algorithms/DistributionCountingSort.h src/algorithms/SortingAlgorithm.h src/Sorter.h)
+add_executable(alg2_levitin_sort src/main.cpp src/algorithms/ComparisonCountingSort.h src/algorithms/DistributionCountingSort.h src/algorithms/SortingAlgorithm.h src/Sorter.h src/VectorUtils.h src/algorithms/ComparisonCountingSort.cpp src/algorithms/DistributionCountingSort.cpp src/VectorUtils.cpp src/Sorter.cpp)

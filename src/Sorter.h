@@ -6,15 +6,13 @@
 #define ALG2_LEVITIN_SORT_SORTER_H
 
 #include <vector>
+#include <chrono>
+#include "VectorUtils.h"
 #include "algorithms/SortingAlgorithm.h"
 
-namespace Sorter {
-    static std::vector<int> sort(std::vector<int> data, SortingAlgorithm *algorithm){
-        auto const& result = algorithm->process(data);
-        delete algorithm;
-
-        return result;
-    };
+class Sorter {
+public:
+    static std::vector<int> sort(const std::vector<int>& data, SortingAlgorithm *algorithm);
 };
 
 #endif //ALG2_LEVITIN_SORT_SORTER_H
